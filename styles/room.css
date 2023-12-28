@@ -1,0 +1,48 @@
+.information{
+    font-size: 150%;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+
+.dice_thrower{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.text_dice_thrower{
+    font-size: 150%;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.apply_text_dice_thrower{
+    font-size: 150%;
+    border-radius: 25px;
+}
+
+.row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    vertical-align: top;
+}
+
+.playerHandler{
+    font-size: 200%;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #333;
+    font-weight: bold;
+}
+
+#morePlayer, #lessPlayer, #addcanvas{
+    font-size: 100%;
+    text-align: center;
+}
