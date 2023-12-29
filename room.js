@@ -1,6 +1,9 @@
 
-const maxWidthCanvas = (window.screen.width * 90)/100;
-const maxHeightCanvas = (window.screen.height * 80)/100;
+const maxWidthCanvas = (window.screen.width * 100)/100;
+const maxHeightCanvas = (window.screen.height * 70)/100;
+
+// const maxWidthCanvas = 500;
+// const maxHeightCanvas = 500;
 
 function addPlayer(){
     const totalOfCanvas = document.getElementsByTagName("canvas").length;
@@ -37,6 +40,7 @@ function createCanvas(width, height, totalPlayer)
     for(var i = 0; i < totalPlayer; i++)
     {
         var canvas = document.createElement('canvas');
+        
         canvas.id = "canvas" + i;
         canvas.width = width;
         canvas.height =  height;
@@ -52,13 +56,12 @@ function createCanvas(width, height, totalPlayer)
 
         row.appendChild(canvas);
         cursorLayer = document.getElementById("canvas" + i);
-        init("canvas" + i);
+        init("canvas" + i, totalPlayer);
     }
 
 }
 
-
-function init(canvasid) {
+function init(canvasid, totalPlayer) {
     // Get canvas object from the DOM
     var canvas = document.getElementById(canvasid);
 
@@ -78,7 +81,7 @@ function init(canvasid) {
     }
 
     // Write the positions of vertices to a vertex shader
-    var n = initVertexBuffers(gl);
+    var n = initVertexBuffers(gl, totalPlayer);
     if (n < 0) {
         console.log('Failed to set the positions of the vertices');
         return;
@@ -92,12 +95,12 @@ function init(canvasid) {
     gl.drawArrays(gl.TRIANGLES, 0, n);
 }
 
-function initVertexBuffers(gl) {
+function initVertexBuffers(gl, totalPlayer) {
     // Vertices
     var dim = 2; 
     var vertices = new Float32Array([
-        -0.5, 0.5, 0.5, 0.5, 0.5, -0.5, // Triangle 1
-        -0.5, 0.5, 0.5, -0.5, -0.5, -0.5 // Triangle 2 
+        -0.5/(maxWidthCanvas/maxHeightCanvas), 0.5/totalPlayer, 0.5/(maxWidthCanvas/maxHeightCanvas), 0.5/totalPlayer, 0.5/(maxWidthCanvas/maxHeightCanvas), -0.5/totalPlayer, // Triangle 1
+        -0.5/(maxWidthCanvas/maxHeightCanvas), 0.5/totalPlayer, 0.5/(maxWidthCanvas/maxHeightCanvas), -0.5/totalPlayer, -0.5/(maxWidthCanvas/maxHeightCanvas), -0.5/totalPlayer // Triangle 2 
     ]);
 
     // Fragment color

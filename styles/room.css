@@ -1,5 +1,5 @@
 .information{
-    font-size: 150%;
+    font-size: 140%;
     position: absolute;
     bottom: 10px;
     left: 10px;
@@ -19,6 +19,7 @@
     font-size: 150%;
     text-align: center;
     border-radius: 25px;
+
 }
 
 .apply_text_dice_thrower{

@@ -10,16 +10,17 @@
 <body>
 
   <div class = "dice_thrower">
-    <input class = "text_dice_thrower">
-    <button type="submit" class = "apply_text_dice_thrower"> Lancer dé ! </button>
+        <input class = "text_dice_thrower">
+        <button type="submit" class = "apply_text_dice_thrower"> Lancer dé ! </button>
   </div>
+  
 
   <div class="row"> </div>
 
   <div class="information">
     <div class="username"> Username : <?php echo $_GET['username'];?> </div>
-    <div class="codeRoom"> Room Code : <?php echo $_GET['codeRoom']; ?></div>
-    <div id="PeopleInRoom"> Nbr Of Player : </div>
+    <div class="codeRoom">  Room Code : <?php echo $_GET['codeRoom']; ?></div>
+    <div id="PeopleInRoom">  Nbr Of Player : </div>
   </div>
 
   <div class="playerHandler">
