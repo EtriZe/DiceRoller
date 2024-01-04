@@ -9,20 +9,35 @@
 
 </head>
 <body>
-    <div class="login-container">
-        <h1>Connexion</h1>
-        <form action="room.php">
-            <label for="username">Pseudo</label>
-            <input type="text" id="username" name="username" value="Gorméus" required>
+    
+    <div>
+        <div class="redirect">
+            <button type="submit" onclick="redirectCssLearning()"> CSS Training </button>
+        </div>
 
-            <label for="codeRoom">Code</label>
+        <div class="login-container">
+            <h1>Connexion</h1>
+            <form action="room.php">
+                <label for="username">Pseudo</label>
+                <input type="text" id="username" name="username" value="Gorméus" required>
 
-            <input type="text" value="33333" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" 
-             id="codeRoom" name="codeRoom" required maxlength="5" >
-            
-            <button type="submit">Se connecter</button>
+                <label for="codeRoom">Code</label>
 
-        </form>
+                <input type="text" value="33333" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))" 
+                id="codeRoom" name="codeRoom" required maxlength="5" >
+                
+                <button type="submit">Se connecter</button>
+
+            </form>
+        </div>
     </div>
+    
 </body>
+
+<script>
+function redirectCssLearning()
+{
+    window.location.href = "csslearning/";
+}
+</script>
 </html>

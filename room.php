@@ -5,13 +5,14 @@
     <title>DiceRoller</title>
     <link rel="stylesheet" href="styles/room.css" type='text/css'>
     <title>Liste Déroulante avec CSS et JavaScript</title>
-    <script type="text/javascript" src="room.js"></script>
+    <script type="text/javascript" src="scripts/room.js"></script>
+    <script type="text/javascript" src="scripts/webgl.js"></script>
   </head>
 <body>
 
   <div class = "dice_thrower">
         <input class = "text_dice_thrower">
-        <button type="submit" class = "apply_text_dice_thrower"> Lancer dé ! </button>
+        <button onclick="rollDice()" type="submit"  class = "apply_text_dice_thrower"> Lancer dé ! </button>
   </div>
   
 
